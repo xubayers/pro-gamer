@@ -1,5 +1,6 @@
 @media screen and (max-width: 1200px) {
-  nav {
+  nav,
+  .wid-carts {
     margin: 0 1rem;
   }
   main .content {
@@ -70,12 +71,19 @@
       }
     }
   }
+  .wid-carts {
+    max-width: 70rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 767px) {
   :root {
     --font-lz: 3rem;
     --font-md: 2rem;
     --font-sm: 1.5rem;
+  }
+  .btn {
+    padding: 1rem 2rem;
   }
   header {
     height: 80rem;
@@ -106,6 +114,13 @@
   }
   .showMenu {
     display: block;
+  }
+  .wid-carts {
+    margin: 0 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    .cart {
+      max-width: 45rem;
+    }
   }
 }
 @media screen and (max-width: 540px) {

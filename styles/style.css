@@ -293,7 +293,7 @@ main .content {
 .about-section {
   max-width: 120rem;
   margin: 0 auto;
-  margin-top: 4rem;
+  padding: 3rem 0 7rem 0;
   display: flex;
   justify-content: center;
   gap: 6rem;
@@ -346,4 +346,27 @@ main .content {
   font-size: 1.4rem;
   line-height: 1.6;
   color: #c4c4c4;
+}
+/* what i do section  */
+.wid-carts {
+  max-width: 120rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 4rem;
+  & .cart {
+    padding: 3rem;
+    clip-path: polygon(14% 0, 100% 0, 100% 79%, 88% 100%, 0 100%, 0 19%);
+    background-color: #241330;
+    & div {
+      display: flex;
+      align-items: center;
+      font-size: var(--font-md);
+      text-transform: capitalize;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
 }
