@@ -1,0 +1,80 @@
+@media screen and (max-width: 1200px) {
+  nav {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  :root {
+    --font-lz: 3rem;
+    --font-md: 2rem;
+    --font-sm: 1.5rem;
+  }
+  nav {
+    margin: 0 1rem;
+    .items {
+      display: none;
+    }
+    .searchAndInstaIcon {
+      display: none;
+    }
+    .mobile-bar-and {
+      .bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(208, 208, 208);
+        height: 4rem;
+        width: 4rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+  main .content {
+    margin: 0 1rem;
+    margin-top: 15rem;
+    margin-left: 5rem;
+    h4 {
+      font-size: calc(var(--font-sm) + 0.1rem);
+    }
+  }
+  h1 {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 80rem;
+  }
+  main .content {
+    margin: 0 1rem;
+    margin-top: 18rem;
+    h4 {
+      font-size: var(--font-sm);
+    }
+    h1 {
+      font-size: 4rem;
+      width: 40rem;
+    }
+  }
+  .mobile-bar-and {
+    .mobile-menu {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  header {
+    height: 60rem;
+  }
+  main .content {
+    margin: 0 1rem;
+    margin-top: 13rem;
+    h4 {
+      font-size: var(--font-sm);
+    }
+    h1 {
+      font-size: 3.5rem;
+      width: 40rem;
+    }
+  }
+}
