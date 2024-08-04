@@ -12,7 +12,7 @@
 :root {
   --primary-color: #1a0e22;
   --secondery-color: #ffc010;
-  --font-lz: 3rem;
+  --font-lz: 5.5rem;
   --font-md: 2rem;
   --font-sm: 1.5rem;
   --hidden-nav-bg: #00081b;
@@ -59,11 +59,10 @@ header {
 }
 nav {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.407), transparent);
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   animation: navAnimate 0.5s linear;
   -webkit-animation: navAnimate 0.5s linear;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,13 +70,13 @@ nav {
     height: 6rem;
     margin-top: 3rem;
   }
-  .items {
+  & .items {
     display: flex;
     font-size: var(--font-sm);
     text-transform: uppercase;
     font-weight: bold;
     gap: 6rem;
-    li {
+    & li {
       cursor: pointer;
       transition: all 0.2s linear;
       -webkit-transition: all 0.2s linear;
@@ -91,36 +90,36 @@ nav {
       }
     }
   }
-  .searchAndInstaIcon {
+  & .searchAndInstaIcon {
     font-size: var(--font-md);
-    ion-icon {
+    & ion-icon {
       cursor: pointer;
     }
-    ion-icon:nth-child(1) {
+    & ion-icon:nth-child(1) {
       padding: 0 1.5rem;
       margin-right: 1rem;
       border-right: 1px solid gray;
     }
   }
-  .mobile-bar-and {
+  & .mobile-bar-and {
     z-index: 999;
-    .bar {
+    & .bar {
       font-size: calc(var(--font-md) + 0.5rem);
       cursor: pointer;
     }
-    .mobile-menu {
+    & .mobile-menu {
       transition: all 0.3s linear;
       -webkit-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
       -ms-transition: all 0.3s linear;
       -o-transition: all 0.3s linear;
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: 0;
+      right: -100%;
       background-color: var(--hidden-nav-bg);
       height: 100vh;
       padding: 3rem;
-      .close-btn ion-icon {
+      & .close-btn ion-icon {
         font-size: var(--font-md);
         cursor: pointer;
         margin: 1rem 0 2.5rem 0;
@@ -133,12 +132,12 @@ nav {
           color: var(--secondery-color);
         }
       }
-      .search-bar {
+      & .search-bar {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: right;
-        input {
+        & input {
           height: 4rem;
           width: 25rem;
           outline: none;
@@ -147,7 +146,7 @@ nav {
           padding: 1rem;
           color: #fff;
         }
-        ion-icon {
+        & ion-icon {
           position: absolute;
           right: 0;
           font-size: 2rem;
@@ -159,13 +158,13 @@ nav {
           cursor: pointer;
         }
       }
-      .hide-items {
+      & .hide-items {
         margin-top: 3.2rem;
         font-size: calc(var(--font-sm) + 0.3rem);
         text-transform: capitalize;
         display: flex;
         flex-direction: column;
-        li {
+        & li {
           padding: 1rem 0;
           border-bottom: 0.51px solid rgba(128, 128, 128, 0.25);
           cursor: pointer;
@@ -178,24 +177,13 @@ nav {
             color: var(--secondery-color);
           }
         }
-        .number {
+        & .number {
           margin-top: 2rem;
         }
       }
     }
-    .mobile-menu {
-      transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-    }
-    .showMenu {
-      transform: translateX(0%);
-      -webkit-transform: translateX(0%);
-      -moz-transform: translateX(0%);
-      -ms-transform: translateX(0%);
-      -o-transform: translateX(0%);
+    & .showMenu {
+      right: 0%;
     }
   }
 }
@@ -223,23 +211,23 @@ main .content {
   margin: 0 auto;
   margin-top: 15rem;
   height: 100%;
-  h4 {
+  & h4 {
     font-size: calc(var(--font-sm) + 0.2rem);
     text-transform: uppercase;
     color: #68fe9a;
     letter-spacing: 0.3rem;
     animation: firstLoad 0.5s linear;
-    -webkit-animation: firstLoadMainH4 0.5s linear;
+    -webkit-animation: firstLoad 0.5s linear;
   }
-  h1 {
+  & h1 {
     text-transform: uppercase;
     font-size: 8rem;
-    width: 50rem;
+    width: 60%;
     margin-top: 2rem;
     animation: firstLoad 0.5s linear;
     -webkit-animation: firstLoadMainH1 0.5s linear;
   }
-  .btn {
+  & .btn {
     color: #fff;
     background: var(--secondery-color);
     margin-top: 2rem;
@@ -297,4 +285,65 @@ main .content {
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
   }
+}
+/* about gaming companies secton  */
+.about {
+  background: url(../images/about-bg.png);
+}
+.about-section {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+  .image {
+    img {
+      height: 60rem;
+    }
+  }
+  & .about-content {
+    & li {
+      color: #c4c4c4;
+      font-size: 1.4rem;
+      margin-top: 1.4rem;
+      span {
+        color: var(--secondery-color);
+      }
+    }
+    & h2 {
+      font-size: var(--font-lz);
+      text-transform: uppercase;
+      width: 80%;
+      margin-bottom: 7rem;
+      position: relative;
+      span {
+        color: var(--secondery-color);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        height: 5rem;
+        width: 20rem;
+        background: url(../images/circle_left.png) no-repeat;
+      }
+    }
+    & p {
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    & .btn {
+      background-color: transparent;
+      border: 2px solid var(--secondery-color);
+      color: #fff;
+      margin-top: 3rem;
+    }
+  }
+}
+.para {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #c4c4c4;
 }

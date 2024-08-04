@@ -1,16 +1,42 @@
 @media screen and (max-width: 1200px) {
   nav {
+    margin: 0 1rem;
+  }
+  main .content {
     margin: 0 2rem;
+    margin-top: 15rem;
+  }
+  .about-section {
+    margin: 0 2rem;
+  }
+  .about-section {
+    .image {
+      img {
+        height: 50rem;
+      }
+    }
+    .about-content {
+      h2 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+    }
   }
 }
 @media screen and (max-width: 992px) {
   :root {
-    --font-lz: 3rem;
+    --font-lz: 5rem;
     --font-md: 2rem;
     --font-sm: 1.5rem;
   }
+  main .content h1 {
+    font-size: 7.5rem;
+    width: 80%;
+  }
   nav {
-    margin: 0 1rem;
+    margin: 0 2rem;
     .items {
       display: none;
     }
@@ -29,52 +55,72 @@
       }
     }
   }
-  main .content {
-    margin: 0 1rem;
-    margin-top: 15rem;
-    margin-left: 5rem;
-    h4 {
-      font-size: calc(var(--font-sm) + 0.1rem);
+  .about-section {
+    flex-direction: column;
+    gap: 6rem;
+    .image {
+      img {
+        height: 80rem;
+      }
     }
-  }
-  h1 {
-    font-size: 6rem;
+    .about-content {
+      width: 73%;
+      h2 {
+        margin-bottom: 5rem;
+      }
+    }
   }
 }
 @media screen and (max-width: 767px) {
+  :root {
+    --font-lz: 3rem;
+    --font-md: 2rem;
+    --font-sm: 1.5rem;
+  }
   header {
     height: 80rem;
   }
   main .content {
-    margin: 0 1rem;
-    margin-top: 18rem;
-    h4 {
-      font-size: var(--font-sm);
-    }
-    h1 {
-      font-size: 4rem;
-      width: 40rem;
-    }
+    margin-top: 15rem;
+  }
+  main .content h1 {
+    font-size: 3.5rem;
   }
   .mobile-bar-and {
     .mobile-menu {
       width: 100%;
     }
   }
+  .about-section {
+    .image {
+      img {
+        height: 60rem;
+      }
+    }
+    .about-content {
+      width: 85%;
+    }
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .showMenu {
+    display: block;
+  }
 }
 @media screen and (max-width: 540px) {
   header {
     height: 60rem;
   }
-  main .content {
-    margin: 0 1rem;
-    margin-top: 13rem;
-    h4 {
-      font-size: var(--font-sm);
+  .about-section {
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
-    h1 {
-      font-size: 3.5rem;
-      width: 40rem;
+    .about-content {
+      width: 100%;
     }
   }
 }
