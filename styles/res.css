@@ -1,7 +1,7 @@
 @media screen and (max-width: 1200px) {
   nav,
   .wid-carts {
-    margin: 0 1rem;
+    margin: 0 2rem;
   }
   main .content {
     margin: 0 2rem;
@@ -72,8 +72,47 @@
     }
   }
   .wid-carts {
+    margin: 0 auto;
     max-width: 70rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .all-games {
+    width: 80%;
+    margin: 0 auto;
+    .navs {
+      display: flex;
+      justify-content: end;
+      position: relative;
+    }
+    .small-navigator {
+      position: absolute;
+      display: flex;
+      border: none;
+      outline: none;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      color: var(--secondery-color);
+      background-color: rgb(30, 30, 30);
+      gap: 0.5rem;
+      text-transform: capitalize;
+      cursor: pointer;
+      width: 15rem;
+      & option {
+        color: #dddddd;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.247);
+        padding: 1rem 2rem;
+        letter-spacing: 0.02rem;
+        &:hover {
+          background-color: rgba(202, 149, 14, 0.242);
+        }
+      }
+    }
+    .navigator {
+      display: none;
+    }
+    .games {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 @media screen and (max-width: 767px) {
@@ -120,6 +159,30 @@
     grid-template-columns: repeat(1, 1fr);
     .cart {
       max-width: 45rem;
+    }
+  }
+  .all-games {
+    width: 100%;
+    max-width: 54rem;
+    .games {
+      max-width: 45rem;
+    }
+  }
+  .trend-game {
+    padding: 7rem 2rem 5rem 2rem;
+    margin: 6rem 0rem 0rem 0rem;
+    .games {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 2rem;
+    }
+    & .title {
+      & h2 {
+        &::before {
+          top: 4rem;
+          height: 3rem;
+          width: 24rem;
+        }
+      }
     }
   }
 }

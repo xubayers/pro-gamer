@@ -370,3 +370,99 @@ main .content {
     }
   }
 }
+/* trending games style */
+.small-navigator {
+  display: none;
+}
+.trend-game {
+  margin-top: 8rem;
+  background: url(../images/trendiang-bg.png);
+  background-size: cover;
+  padding-top: 10rem;
+}
+.all-games {
+  max-width: 120rem;
+  margin: 0 auto;
+  & .title {
+    margin-bottom: 8rem;
+    & h2 {
+      font-size: var(--font-lz);
+      text-transform: uppercase;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 7rem;
+        height: 4rem;
+        width: 29rem;
+        background: url(../images/circle_left.png) no-repeat;
+      }
+      & span {
+        color: var(--secondery-color);
+      }
+    }
+  }
+  & .navigator {
+    display: flex;
+    gap: 4rem;
+    text-transform: uppercase;
+    font-size: var(--font-sm);
+    & li {
+      padding: 0 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      &:hover {
+        color: var(--secondery-color);
+      }
+    }
+  }
+  & .games {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 95%;
+
+    & .cart {
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      cursor: pointer;
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+      &:hover {
+        background: var(--secondery-color);
+      }
+      &:hover h4 {
+        color: #ffffff;
+      }
+    }
+    & .text {
+      padding: 3rem 2rem;
+      cursor: pointer;
+
+      & h3 {
+        font-size: var(--font-md);
+        text-transform: uppercase;
+      }
+      & h4 {
+        font-size: calc(var(--font-md) - 0.2rem);
+        font-weight: 400;
+        text-transform: uppercase;
+        color: rgb(200, 200, 200);
+        letter-spacing: 0.15rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
