@@ -163,13 +163,13 @@
   }
   .all-games {
     width: 100%;
+    padding: 7rem 2rem 5rem 2rem;
     max-width: 54rem;
     .games {
       max-width: 45rem;
     }
   }
   .trend-game {
-    padding: 7rem 2rem 5rem 2rem;
     margin: 6rem 0rem 0rem 0rem;
     .games {
       grid-template-columns: repeat(1, 1fr);
@@ -200,5 +200,20 @@
     .about-content {
       width: 100%;
     }
+  }
+  .dropdown-bar {
+    & ion-icon {
+      font-size: 3.5rem;
+      cursor: pointer;
+    }
+    & ion-icon {
+      font-size: 2.5rem;
+    }
+    & img {
+      height: 70%;
+    }
+  }
+  & .xtime {
+    font-size: 2rem;
   }
 }

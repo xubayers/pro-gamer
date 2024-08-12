@@ -84,3 +84,81 @@ gamerNavs.addEventListener('click', function(event) {
         break
     }
 })
+
+
+let cartImages = [
+    {
+        id: 0,
+        url: "./images/protfolio-img01.png",
+    },
+    {
+        id: 1,
+        url: "./images/protfolio-img02.png",
+    },
+    {
+        id: 2,
+        url: "./images/protfolio-img03.png",
+    }, 
+    {
+        id: 3,
+        url: "./images/protfolio-img04.png",
+    }
+]
+const dropdownBar = document.querySelector('.dropdown-bar');
+document.querySelectorAll('.games .cart').forEach((cart) => {
+        cart.addEventListener('click', () => {
+            dropdownBar.style.display = 'flex';
+            window.onscroll = function () {
+                window.scrollTo(0, 3000);
+            }
+            let xtime = document.querySelector('.dropdown-bar .xtime');
+            let cartId = parseInt(cart.getAttribute('name'));
+            let id;
+            cartImages.map((val, i) => {
+               
+                id = cartId;
+                xtime.innerHTML= cartId + ' of ' + (cartImages.length -1);
+                if(cartId === val.id) {
+                    document.querySelector('.dropdown-bar .image img').setAttribute('src', val.url)
+                }
+            })
+
+            document.querySelector('.dropdown-bar .right-arrow ion-icon').addEventListener('click', function() {
+                id = id % cartImages.length;
+                xtime.innerHTML= id + ' of ' + (cartImages.length-1)
+                    document.querySelector('.dropdown-bar .image img').setAttribute('src', cartImages[id].url)
+                        id++;
+                        return function(){
+                            return id
+                        }
+            })
+            document.querySelector('.dropdown-bar .left-arrow ion-icon').addEventListener('click', function() {
+                id = id % cartImages.length;
+                xtime.innerHTML= id + ' of ' + (cartImages.length-1)
+                if(id === 0) {
+                    id = cartImages.length -1;
+                }
+                    document.querySelector('.dropdown-bar .image img').setAttribute('src', cartImages[id].url)
+                        id--;
+                        return function(){
+                            return id
+                        }
+            })
+    })
+
+})
+function closeDropsown() {
+    document.querySelector('.dropdown-bar').style.display = 'none';
+    window.onscroll = null;
+}
+document.querySelector('.dropdown-bar .xmark ion-icon').addEventListener('click', closeDropsown)
+
+document.querySelector('.dropdown-bar').addEventListener('click', (e) => {
+    let blankAria = document.querySelector('.dropdown-bar');
+    if(e.target.getAttribute('class') === blankAria.getAttribute('class')) {
+        closeDropsown()
+    }
+})
+
+
+// document.querySelector('.dropdown-bar .image img').setAttribute('src', val.url)
